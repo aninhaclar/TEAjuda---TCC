@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4db5ff, #58e0c6);
+  font-family: "Hepta Slab", serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 0 40px 40px 0;
+  width: 50%;
+  height: 60vh;
+  position: relative;
+  overflow: visible; /* permite a imagem sair do card */
+}
+
+.image {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+}
+
+.ilustracao {
+  position: absolute;
+  top: 50%;
+  right: -305px;  
+  transform: translateY(-50%);
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.textos {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;      
+  gap: 15px; 
+}
+
+.textos h2 {
+  font-family: "Hepta Slab", serif;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0; 
+}
+
+.textos h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+
+.botaoProximo {
+  background: linear-gradient(135deg, #4db5ff, #0031f4);
+  border: none;
+  padding: 12px 30px;
+  font: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
