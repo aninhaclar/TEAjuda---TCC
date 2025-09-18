@@ -11,6 +11,8 @@ body {
   background: linear-gradient(to right, #4da9ff, #64dfcb);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 .main {
@@ -19,9 +21,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 50px;
+  position: relative;
+  z-index: 2; /* fica acima da faixa branca */
 }
 
-/* Lado esquerdo com ilustração */
 .left {
   flex: 1;
   display: flex;
@@ -32,8 +35,8 @@ body {
 .left img {
   max-width: 100%;
   height: auto;
+  z-index: 2;
 }
-
 
 .right {
   flex: 1;
@@ -92,10 +95,15 @@ body {
   background: #0d6efd;
 }
 
-/* Base branca arredondada */
 .bottom-card {
-  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 600px; /* aumenta a altura */
   background: #fff;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  z-index: 1; /* fica atrás do conteúdo */
 }
+

@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,144 +5,116 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom right, #4da8ff, #6ee7e1), url("../IMG/page03/quebracabeça.png");
-    background-size: cover, 120px; 
-    background-repeat: no-repeat, repeat;
-  }
-  
+body, html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    url("../IMG/fundo.png") no-repeat center center / cover,
+    linear-gradient(to bottom right, #00FFB2, #06E6C4, #07DECA, #09D6D0, #0CC9D9, #0FBCE2, #12ADEC, #15A0F5, #1892FF);
+}
 
-.login-box {
-  background: #fff;
+.login-container {
+  background-color: #fff;
   padding: 40px 30px;
-  border-radius: 20px;
-  width: 380px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  width: 400px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.login-box img {
-  width: 50px;
-  margin-bottom: 10px;
+.login-container img.logo {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 15px;
 }
 
-h2 {
-  font-size: 22px;
-  margin-bottom: 25px;
+.login-container h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
   color: #333;
 }
 
 .input-group {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.input-group img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.7;
 }
 
 .input-group input {
   width: 100%;
-  padding: 12px 40px;
+  padding: 10px 10px 10px 30px;
   border: none;
-  border-bottom: 2px solid #888;
-  font-size: 14px;
+  border-bottom: 1px solid #ccc;
   outline: none;
+  font-size: 16px;
 }
 
-.input-group input:focus {
-  border-color: #4da8ff;
-}
-
-.input-group .icon {
+.input-group .toggle-pass {
   position: absolute;
   top: 50%;
-  left: 10px;
+  right: 0;
   transform: translateY(-50%);
-  font-size: 16px;
-  color: #444;
-}
-
-.input-group .toggle {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  font-size: 16px;
-  color: #444;
+  width: 20px;
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .forgot {
   display: block;
   text-align: right;
+  margin-top: -15px;
+  margin-bottom: 20px;
   font-size: 12px;
   color: #555;
-  margin-top: -10px;
-  margin-bottom: 25px;
-  cursor: pointer;
   text-decoration: none;
 }
 
-.forgot:hover {
-  text-decoration: underline;
-}
-
-.btn {
+.login-btn, .google-btn {
   width: 100%;
-  padding: 12px;
-  background: #2d8cff;
-  color: white;
+  padding: 10px;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
-.btn:hover {
-  background: #1b6fd9;
+.login-btn {
+  background-color: #4A90E2;
+  color: #fff;
 }
 
-.btn-google {
-  width: 100%;
-  padding: 12px;
-  background: #fff;
+.google-btn {
+  background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: #444;
-  transition: 0.3s;
 }
 
-.btn-google img {
+.google-btn img {
   width: 20px;
 }
 
-.btn-google:hover {
-  background: #f5f5f5;
+.signup {
+  font-size: 12px;
+  color: #555;
 }
 
-.register {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #444;
-}
-
-.register a {
-  color: #2d8cff;
+.signup a {
+  color: #4A90E2;
   text-decoration: none;
-  font-weight: bold;
-}
-
-.register a:hover {
-  text-decoration: underline;
 }

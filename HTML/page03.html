@@ -3,37 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEAjuda Login</title>
   <link rel="stylesheet" href="../CSS/page03.css">
-
-  <title>Login - TEAjuda</title>
-
 </head>
 <body>
-  <div class="login-box">
-    <img src="../IMG/logoTEA.png" alt="Logo">
+  <div class="login-container">
+    <img src="../IMG/logoTEA.png" alt="Logo" class="logo">
     <h2>TEAjuda</h2>
 
     <div class="input-group">
-      <i class="fa fa-user icon"></i>
-      <input type="email" placeholder="Digite seu email...">
+      <img src="../IMG/page03/usuario.png" alt="Usuário">
+      <input type="email" placeholder="Digite seu email">
     </div>
 
     <div class="input-group">
-      <i class="fa fa-lock icon"></i>
-      <input type="password" placeholder="Digite sua senha...">
-      <i class="fa fa-eye toggle"></i>
+      <img src="../IMG/page03/senha.png" alt="Senha">
+      <input type="password" placeholder="Digite sua senha">
+    
     </div>
 
     <a href="#" class="forgot">esqueceu a senha?</a>
 
-    <button class="btn">ENTRAR</button>
+    <button class="login-btn">ENTRAR</button>
+  
 
-    <button class="btn-google">
-      <img src="../IMG/page03/logoGoogle.png" alt="Google">
-      Login com Google
-    </button>
-
-    <p class="register">Não possui conta?</p>
+    <div class="signup">
+      Não possui conta? <a href="#">Cadastre-se</a>
+    </div>
   </div>
 </body>
 </html>
