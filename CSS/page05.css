@@ -1,0 +1,121 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4fc3f7, #80deea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; 
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../IMG/fundo.png') no-repeat center center;
+    background-size: cover;
+    opacity: 1; 
+    z-index: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1; 
+}
+
+.box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 50px 40px 60px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.icon {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.email-label {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #999;
+    padding-bottom: 5px;
+    gap: 10px; /* espaço entre ícone e input */
+}
+
+.email-icon {
+    font-size: 28px; /* ajusta se necessário */
+    line-height: 1; /* centraliza verticalmente */
+    user-select: none;
+}
+
+input[type="email"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    background: transparent;
+    line-height: 1.2; /* mantém o input alinhado */
+}
+
+
+input[type="email"]::placeholder {
+    color: #bbb;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.info-text {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.btn-submit {
+    background-color: #2489ff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1b6ed5;
+}

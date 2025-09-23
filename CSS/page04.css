@@ -1,121 +1,158 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body, html {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:
-      url("../IMG/fundo.png") no-repeat center center / cover,
-      linear-gradient(to bottom right, #00FFB2, #06E6C4, #07DECA, #09D6D0, #0CC9D9, #0FBCE2, #12ADEC, #15A0F5, #1892FF);
-  }
-  
-  .login-container {
-    background-color: #fff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    width: 400px;
-    text-align: center;
-  }
-  
-  .login-container img.logo {
-    width: 140px;
-    height: 140px;
-    margin-bottom: 15px;
-  }
-  
-  .login-container h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .input-group {
-    position: relative;
-    margin-bottom: 25px;
-    text-align: left;
-  }
-  
-  .input-group img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 20px;
-    opacity: 0.7;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 10px 10px 10px 30px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: none;
-    font-size: 16px;
-  }
-  
-  .input-group .toggle-pass {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 20px;
-    cursor: pointer;
-    opacity: 0.7;
-  }
-  
-  .forgot {
-    display: block;
-    text-align: right;
-    margin-top: -15px;
-    margin-bottom: 20px;
-    font-size: 12px;
-    color: #555;
-    text-decoration: none;
-  }
-  
-  .login-btn, .google-btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 15px;
-  }
-  
-  .login-btn {
-    background-color: #4A90E2;
-    color: #fff;
-  }
-  
-  .google-btn {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .google-btn img {
-    width: 20px;
-  }
-  
-  .signup {
-    font-size: 12px;
-    color: #555;
-  }
-  
-  .signup a {
-    color: #4A90E2;
-    text-decoration: none;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+height: 100vh;
+background: linear-gradient(135deg, #4fc3f7, #80deea);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background: url('../IMG/fundo.png') no-repeat center center;
+  background-size: cover;
+  opacity: 1;
+  z-index: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.login-card {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 400px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.input-group img {
+  width: 20px;
+  height: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 10px 0;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 20px;
+  width: 90%;
+  color: #666;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.buttons-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn {
+  background-color: #1892FF;
+  color: white;
+}
+
+.google-btn {
+  background-color: #4285F4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;              /* espaço entre ícone e texto */
+  white-space: nowrap;    /* evita quebra de linha */
+  padding: 10px;
+  font-size: 14px;
+}
+
+.google-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.signup {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}

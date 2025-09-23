@@ -1,48 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TEAjuda Login</title>
-  <link rel="stylesheet" href="../CSS/page03.css">
+  <link rel="stylesheet" href="../CSS/page04.css">
+  <script src="registro.js"></script>
 </head>
 <body>
   <div class="login-container">
-    <img src="../IMG/logoTEA.png" alt="Logo" class="logo">
-    <h2>TEAjuda</h2>
-
-    <div class="input-group">
-        <img src="../IMG/page04/usuario.png" alt="Usuário">
-        <input type="email" placeholder="Digite seu nome">
+    <div class="login-card">
+      <div class="logo">
+        <img src="../IMG/logoTEA.png" alt="Logo TEAjuda">
       </div>
+      <h1>TEAjuda</h1>
 
-      <div class="input-group">
-        <img src="../IMG/page04/usuario.png" alt="Usuário">
-        <input type="email" placeholder="Digite o nome do tutelado">
-      </div>
-  
-    <div class="input-group">
-      <img src="../IMG/page04/email.png" alt="Usuário">
-      <input type="email" placeholder="Digite seu email">
-    </div>
-
-      <div class="input-group">
-        <img src="../IMG/page04/senha.png" alt="Senha">
-        <input type="password" placeholder="Digite sua senha">
-        </div>
+      <form>
         <div class="input-group">
-            <img src="../IMG/page04/senha.png" alt="Senha">
-            <input type="password" placeholder="Confirme sua senha">
+          <img src="../IMG/page03/usuario.png" alt="">
+          <input type="nome" placeholder="Digite seu nome..." required>
         </div>
-    </div>
 
-    <a href="#" class="forgot">esqueceu a senha?</a>
+        <div class="input-group">
+            <img src="../IMG/page03/usuario.png" alt="">
+            <input type="nome" placeholder="Nome do tutelado..." required>
+          </div>
 
-    <button class="login-btn">cadastrar</button>
-  
 
-    <div class="signup">
-      Não possui conta? <a href="#">Cadastre-se</a>
+          <div class="input-group">
+            <img src="../IMG/page04/email.png" alt="">
+            <input type="nome" placeholder="Digite seu email..." required>
+          </div>
+
+
+        <div class="input-group">
+          <img src="../IMG/page03/senha.png" alt="">
+          <input type="password" placeholder="Digite sua senha..." required>
+        </div>
+
+        <div class="input-group">
+          <img src="../IMG/page03/senha.png" alt="">
+          <input type="password" placeholder="Confirme sua senha..." required>
+        </div>
+
+        <a href="#" class="forgot">esqueceu a senha?</a>
+
+        <div class="buttons-row">
+          <button type="submit" class="btn login-btn">CADASTRAR</button>
+          
+        </div>
+      </form>
+
+      <p class="signup">Não possui conta?</p>
     </div>
   </div>
 </body>
