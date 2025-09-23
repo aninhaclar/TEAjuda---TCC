@@ -19,11 +19,12 @@ body {
   flex: 1;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 50px;
+  align-items: center; /* centraliza verticalmente */
+  padding: 100px;
   position: relative;
-  z-index: 2; /* fica acima da faixa branca */
+  z-index: 2;
 }
+
 
 .left {
   flex: 1;
@@ -36,12 +37,16 @@ body {
   max-width: 100%;
   height: auto;
   z-index: 2;
+  margin-top: 0;
 }
+
+
 
 .right {
   flex: 1;
   text-align: center;
   color: #fff;
+  margin-top: 60px;;
 }
 
 .logo {
@@ -99,11 +104,12 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
-  height: 600px; /* aumenta a altura */
+  width: 55%; 
+  height: 350px; /* mais raso e próximo ao modelo */
   background: #fff;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  z-index: 1; /* fica atrás do conteúdo */
+  border-top-right-radius: 60px; /* arredondamento apenas na direita */
+  z-index: 1;
 }
+
+
 
