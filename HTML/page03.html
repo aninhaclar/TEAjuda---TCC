@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TEAjuda Login</title>
   <link rel="stylesheet" href="../CSS/page03.css">
-  <script src="../JS/page03.js"></script>
+  <script src="../JS/page03modal.js" defer></script>
 </head>
 <body>
   <div class="login-container">
@@ -14,22 +14,43 @@
 
     <div class="input-group">
       <img src="../IMG/page03/usuario.png" alt="Usuário">
-      <input type="email" placeholder="Digite seu email">
+      <input type="email" id="email-login" placeholder="Digite seu email">
     </div>
 
     <div class="input-group">
       <img src="../IMG/page03/senha.png" alt="Senha">
-      <input type="password" placeholder="Digite sua senha">
-    
+      <input type="password" id="senha-login" placeholder="Digite sua senha">
     </div>
 
-    <a href="#" class="forgot">esqueceu a senha?</a>
+    <a href="#" class="forgot" id="open-modal">Esqueceu a senha?</a>
 
-    <button class="login-btn">ENTRAR</button>
-  
+    <button class="login-btn" id="btn-login">ENTRAR</button>
+
+    <div class="message" id="login-message"></div>
 
     <div class="signup">
-      Não possui conta? <a href="#">Cadastre-se</a>
+      Não possui conta? <a href="./page04.html">Cadastre-se</a>
+    </div>
+  </div>
+
+  <!-- MODAL ESQUECEU SENHA -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <img src="../IMG/logoTEA.png" alt="Ícone Usuário" class="icon" />
+      <h2>Esqueceu a senha?</h2>
+      <form id="form-recuperar">
+        <label for="email" class="email-label">
+          <img src="../IMG/page04/email.png" alt="">
+          <input type="email" id="email" placeholder="Digite seu email..." required />
+        </label>
+        <p class="info-text">
+          Enviaremos um e-mail com as instruções <br />
+          de como redefinir senha
+        </p>
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
+      <div class="message" id="recover-message"></div>
     </div>
   </div>
 </body>
