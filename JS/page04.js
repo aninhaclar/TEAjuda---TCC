@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const confirmaSenha = inputs[4].value;
   
       // Validações
-      if (!Nome || !nomeTutelado || !email || !senha || !confirmaSenha) {
+      if (!Nome || !email || !senha || !confirmaSenha) {
         alert('Por favor, preencha todos os campos.');
         return;
       }
@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
   
       const dadosCadastro = {
         nome: Nome,
-        nome_tutelado: nomeTutelado,
+       
         email: email,
         senha: senha
       };
   
       try {
-        const response = await fetch('http://localhost:8080/v1/controle-usuario/usuario', {
+        const response = await fetch('http://10.107.144.31:8080/v1/controle-usuario/usuario', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
