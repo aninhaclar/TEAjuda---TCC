@@ -1,23 +1,33 @@
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
-let currentSlide = 0;
+let currentIndex = 0;
 
 function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-        dots[i].classList.toggle('active', i === index);
-    });
+  if (index >= slides.length) index = 0;
+  if (index < 0) index = slides.length - 1;
+  currentIndex = index;
+
+  slides.forEach((slide, i) => {
+    slide.style.display = (i === index) ? 'block' : 'none';
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
 }
 
-dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-        currentSlide = i;
-        showSlide(currentSlide);
-    });
+document.querySelector('.prev').addEventListener('click', () => {
+  showSlide(currentIndex - 1);
 });
 
-// Se quiser autoplay
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}, 5000);
+document.querySelector('.next').addEventListener('click', () => {
+  showSlide(currentIndex + 1);
+});
+
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    showSlide(Number(dot.dataset.index));
+  });
+});
+
+showSlide(0); // mostrar o primeiro slide inicialmente

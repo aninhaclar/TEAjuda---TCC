@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEAjuda</title>
-    <link rel="stylesheet" href="../CSS/page06.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEAjuda</title>
+  <link rel="stylesheet" href="../CSS/page06.css" />
+  <script src="../JS/page06.js" defer></script>
+
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <a href="home.html"><img src="../IMG/page06/casa.png" alt="Home"> Home</a>
-            <a href="agenda.html"><img src="../IMG/page06/calendario.png" alt="Agenda"> Agenda</a>
-            <a href="clinicas.html"><img src="../IMG/page06/clinicas.png" alt="Clínicas"> Clínicas</a>
-            <a href="relatorio.html"><img src="../IMG/page06/relatorio.png" alt="Relatório"> Relatório</a>
-            <a href="perfil.html"><img src="../IMG/page06/perfil.png" alt="Perfil"> Perfil</a>
-            <a href="#"><img src="../IMG/logoTEA.png" alt="Logo"></a>
-        </nav>
-    </header>
+  <header class="top-bar">
+    <nav class="nav-menu">
+      <a href="../HTML/page06.html" class="nav-item">
+        <img src="../IMG/page06/casa.png" alt="Home" class="icon" />
+        <span>Home</span>
+      </a>
+      <a href="../HTML/page07.html" class="nav-item">
+        <img src="../IMG/page06/calendario.png" alt="Agenda" class="icon" />
+        <span>Agenda</span>
+      </a>
+      <a href="../HTML/page08.html" class="nav-item">
+        <img src="../IMG/page06/clinicas.png" alt="Clinicas" class="icon" />
+        <span>Clinicas</span>
+      </a>
+      <a href="../HTML/page09.html" class="nav-item">
+        <img src="../IMG/page06/relatorio.png" alt="Relatório" class="icon" />
+        <span>Relatório</span>
+      </a>
+      <a href="../HTML/page10.html" class="nav-item">
+        <img src="../IMG/page06/perfil.png" alt="Perfil" class="icon" />
+        <span>Perfil</span>
+      </a>
+    
+    </nav>
+  </header>
 
-    <main>
-        <div class="slideshow">
-            <div class="slide active">
-                <p><strong>Quem somos?</strong></p>
-                <p><strong>A TEAjuda</strong> é um grupo de alunos do Senai Jandira, que tem como objetivo oferecer ajuda e buscar conhecimento sobre a causa TEA.</p>
-                <img src="../IMG/page06/hand.png" alt="Slide 1">
-            </div>
-            <div class="slide">
-                <!-- Outro slide pode ser colocado aqui -->
-            </div>
-            <div class="dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+  <main class="main-content">
+    <div class="slideshow-container">
+
+      <div class="text-block">
+        <h2><a href="#" class="quem-somos">Quem somos?</a></h2>
+        <p>
+          A TEAjuda é um grupo de alunos do Senai Jandira, que tem como objetivo oferecer ajuda e buscar conhecimento sobre a causa TEA.
+        </p>
+      </div>
+
+      <div class="slideshow">
+        <button class="prev">&#10094;</button>
+        <div class="slides-wrapper">
+          <img src="images/img1.jpg" class="slide" />
+          <img src="images/img2.jpg" class="slide" />
+          <img src="images/img3.jpg" class="slide" />
+          <img src="images/img4.jpg" class="slide" />
+          <img src="images/img5.jpg" class="slide" />
+          <img src="images/img6.jpg" class="slide" />
         </div>
-    </main>
+        <button class="next">&#10095;</button>
+      </div>
 
-    <script src="../JS/page06.js"></script>
+    </div>
+
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+      <span class="dot" data-index="5"></span>
+    </div>
+  </main>
+
 </body>
 </html>
