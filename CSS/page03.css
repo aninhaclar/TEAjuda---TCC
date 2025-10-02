@@ -43,7 +43,7 @@ body, html {
   text-align: left;
 }
 
-.input-group img {
+.input-group > img:first-of-type {
   position: absolute;
   top: 50%;
   left: 0;
@@ -61,6 +61,10 @@ body, html {
   font-size: 16px;
 }
 
+.password-group input {
+  padding-right: 35px;
+}
+
 .input-group .toggle-pass {
   position: absolute;
   top: 50%;
@@ -69,6 +73,26 @@ body, html {
   width: 20px;
   cursor: pointer;
   opacity: 0.7;
+}
+
+.password-group {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.toggle-password:hover {
+  opacity: 1;
 }
 
 .forgot {
@@ -94,6 +118,34 @@ body, html {
 .login-btn {
   background-color: #4A90E2;
   color: #fff;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #357ABD;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
+}
+
+.login-btn.btn-clicked {
+  animation: btnPulse 0.3s ease;
+}
+
+@keyframes btnPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .google-btn {

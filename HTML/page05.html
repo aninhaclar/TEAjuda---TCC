@@ -11,7 +11,7 @@
         <div class="box">
             <img src="../IMG/logoTEA.png" alt="Ícone Usuário" class="icon" />
             <h2>Esqueceu a senha?</h2>
-            <form>
+            <form id="forgotPasswordForm">
                 <label for="email" class="email-label">
                     <img src="../IMG/page04/email.png" alt="">
                     <input type="email" id="email" placeholder="Digite seu email..." required />
@@ -24,5 +24,32 @@
             </form>
         </div>
     </div>
+
+    <script>
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            
+            // Salva o email no localStorage
+            localStorage.setItem('userEmail', email);
+            
+            // Redireciona para a página de confirmação
+            window.location.href = 'emailenv.html';
+        });
+
+        // Efeito no botão de enviar
+        const submitBtn = document.querySelector('.btn-submit');
+        
+        submitBtn.addEventListener('click', function(e) {
+            // Adiciona classe de animação
+            this.classList.add('btn-clicked');
+            
+            // Remove a classe após a animação
+            setTimeout(() => {
+                this.classList.remove('btn-clicked');
+            }, 300);
+        });
+    </script>
 </body>
 </html>

@@ -68,7 +68,7 @@ h2 {
     border-bottom: 2px solid #000;
     margin-bottom: 30px;
     font-size: 22px;
-    color: #999;
+   
     padding-bottom: 5px;
     gap: 10px; /* espaço entre ícone e input */
 }
@@ -84,7 +84,7 @@ input[type="email"] {
     border: none;
     outline: none;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     color: #333;
     background: transparent;
     line-height: 1.2; /* mantém o input alinhado */
@@ -97,7 +97,7 @@ input[type="email"]::placeholder {
 }
 
 .info-text {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     color: #000;
     margin-bottom: 40px;
@@ -113,9 +113,32 @@ input[type="email"]::placeholder {
     border-radius: 15px;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-submit:hover {
     background-color: #1b6ed5;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit.btn-clicked {
+    animation: btnPulse 0.3s ease;
+}
+
+@keyframes btnPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

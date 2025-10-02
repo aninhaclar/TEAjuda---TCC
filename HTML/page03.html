@@ -16,15 +16,15 @@
       <img src="../IMG/page03/usuario.png" alt="Usuário">
       <input type="email" id="email-login" placeholder="Digite seu email">
     </div>
-
-    <div class="input-group">
+    <div class="input-group password-group">
       <img src="../IMG/page03/senha.png" alt="Senha">
       <input type="password" id="senha-login" placeholder="Digite sua senha">
+      <img src="../IMG/page03/ocultar.png" alt="Toggle Password" class="toggle-password" id="toggle-password">
     </div>
 
-    <a href="#" class="forgot" id="open-modal">Esqueceu a senha?</a>
+    <a href="../HTML/page05.html" class="forgot">Esqueceu a senha?</a>
 
-""    <button class="login-btn" id="btn-login">ENTRAR</button>
+    <button class="login-btn" id="btn-login">ENTRAR</button>
 
     <div class="message" id="login-message"></div>
 
@@ -61,5 +61,36 @@
       Não possui conta? <a href="../HTML/page04.html">Cadastre-se</a>
     </div>
   </div>
+
+  <script>
+    // Toggle password visibility
+    const togglePassword = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('senha-login');
+
+    togglePassword.addEventListener('click', function() {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      
+      // Alterna entre as imagens de ocultar e mostrar
+      if (type === 'password') {
+        togglePassword.src = '../IMG/page03/ocultar.png';
+      } else {
+        togglePassword.src = '../IMG/page03/mostrar.png';
+      }
+    });
+
+    // Efeito no botão de login
+    const loginBtn = document.getElementById('btn-login');
+    
+    loginBtn.addEventListener('click', function(e) {
+      // Adiciona classe de animação
+      this.classList.add('btn-clicked');
+      
+      // Remove a classe após a animação
+      setTimeout(() => {
+        this.classList.remove('btn-clicked');
+      }, 300);
+    });
+  </script>
 </body>
 </html>

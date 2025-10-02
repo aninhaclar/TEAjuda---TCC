@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEAjuda - Email Enviado</title>
+  <link rel="stylesheet" href="../CSS/emailenv.css" />
+  <script src="../JS/emailenv.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="../IMG/logoTEA.png" alt="Logo TEAjuda" class="logo" />
+      
+      <h1 class="title">
+        Cheque seu E-mail. enviamos o<br />
+        link para redefinir a sua senha<br />
+        para:
+      </h1>
+      
+      <p class="email-masked" id="emailMasked">**********@***.***</p>
+      
+      <button type="button" class="redefine-btn" onclick="window.location.href='page07.html'">
+        Redefinir
+      </button>
+      
+      <p class="spam-warning">
+        Se não encontrar o e-mail verifique a caixa de spam
+      </p>
+    </div>
+  </div>
+</body>
+</html>

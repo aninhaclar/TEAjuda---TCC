@@ -39,17 +39,30 @@
           <input type="password" placeholder="Confirme sua senha..." required>
         </div>
 
-        <a href="#" class="forgot">possui conta?</a>]
-        
-        <a href="../HTML/page03.html" class="forgot">possui conta?</a>
+        <a href="../HTML/page03.html" class="forgot">Possui conta?</a>
 
         <div class="buttons-row">
-          <button type="submit" class="btn login-btn">CADASTRAR</button>
+          <button type="submit" class="btn login-btn" id="btn-cadastrar">CADASTRAR</button>
           
         </div>
       </form>
 
     </div>
   </div>
+
+  <script>
+    // Efeito no botão de cadastrar
+    const cadastrarBtn = document.getElementById('btn-cadastrar');
+    
+    cadastrarBtn.addEventListener('click', function(e) {
+      // Adiciona classe de animação
+      this.classList.add('btn-clicked');
+      
+      // Remove a classe após a animação
+      setTimeout(() => {
+        this.classList.remove('btn-clicked');
+      }, 300);
+    });
+  </script>
 </body>
 </html>

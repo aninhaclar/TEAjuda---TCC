@@ -94,6 +94,34 @@ body, html {
 .login-btn {
   background-color: #4A90E2;
   color: #fff;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #357ABD;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
+}
+
+.login-btn.btn-clicked {
+  animation: btnPulse 0.3s ease;
+}
+
+@keyframes btnPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .google-btn {
